@@ -1,3 +1,7 @@
 from django.contrib import admin
+from .models import Variety
 
-# Register your models here.
+@admin.register(Variety)
+class VarietyAdmin(admin.ModelAdmin):
+    list_display = ('id', 'name', 'registration_date')
+    search_fields = ('name',)
