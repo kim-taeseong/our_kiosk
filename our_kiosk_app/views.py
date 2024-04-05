@@ -1,3 +1,5 @@
-from django.shortcuts import render
+from django.views.generic import ListView
+from .models import Variety, Beverage
 
-# Create your views here.
+class VarietyList(ListView):
+    model = Variety
