@@ -4,4 +4,4 @@
 
 #### 데이터베이스
 
-[데이터베이스](/our_kiosk.png)
+[데이터베이스](./static/our_kiosk.png)
