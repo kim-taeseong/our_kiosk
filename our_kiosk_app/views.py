@@ -23,3 +23,8 @@ class VarietyUpdateView(UpdateView):
 class VarietyDeleteView(DeleteView):
     model = Variety
     success_url = reverse_lazy('our_kiosk_app:index')
+
+class BeverageCreateView(CreateView):
+    model = Beverage
+    fields = ['name', 'variety']
+    success_url = reverse_lazy('our_kiosk_app:index')
