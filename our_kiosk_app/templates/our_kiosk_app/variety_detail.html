@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>variety list</title>
+    <title>variety detail</title>
 </head>
 <body>
-    <h1>메뉴</h1>
-    {% for object in object_list %}
-        <p><a href="{% url 'our_kiosk_app:detail' object.id %}">{{ object.name }}</a></p>
+    {% for beverage in object.beverage_set.all %}
+        <p>{{ beverage.name }}</p>
     {% endfor %}
 </body>
 </html>
