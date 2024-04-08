@@ -1,5 +1,5 @@
 from django.views.generic import ListView, DetailView
-from django.views.generic.edit import CreateView
+from django.views.generic.edit import CreateView, UpdateView
 from django.urls import reverse_lazy
 from .models import Variety, Beverage
 
@@ -13,3 +13,9 @@ class VarietyCreateView(CreateView):
 
 class VarietyDetailView(DetailView):
     model = Variety
+
+class VarietyUpdateView(UpdateView):
+    model = Variety
+    fields = ['name']
+    template_name_suffix = '_updates_form'
+    success_url = reverse_lazy('our_kiosk_app:index')
